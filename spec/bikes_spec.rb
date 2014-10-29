@@ -15,7 +15,7 @@ describe Bike do
 
 	it 'can break' do
 		expect(broken_bike).to be_broken
-	end
+	end 
 
 	it 'can be fixed' do
 		broken_bike = Bike.new
@@ -26,5 +26,6 @@ describe Bike do
 end
 
 # it can break
-# it can be fixed
-# Only permament states that can happen to the bike 
+# it can be fixed 
+
+

@@ -17,11 +17,7 @@ def dock(bike)
 end
 
 def full?
-	if bike_count == @capacity
-		return true
-	elsif bike_count < @capacity
-		return false
-	end
+	bike_count == @capacity
 end
 
 def release(bike)
