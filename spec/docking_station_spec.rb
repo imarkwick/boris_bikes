@@ -18,10 +18,21 @@ describe DockingStation do
 		expect(station.full?).to be true
 	end
 
-	#it "should not accept bike if full" do
-	#	station = DockingStation.new
-	#	bike = Bike.new
-	#	expect
+	it "should not accept bike if full" do
+		station = DockingStation.new
+		bike = Bike.new
+		20.times {station.dock(bike)}
+		expect(lambda {station.dock(bike)}).to raise_error(RuntimeError)
+	end
+
+	it "should release bike if not broken" do
+		station = DockingStation.new
+		bike = Bike.new
+		station.dock(bike)
+		expect(bike.broken?).to be false
+		station.release(bike)
+		expect(station.bike_count).to eq(0)
+	end
 	
 end
 
