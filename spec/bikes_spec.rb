@@ -6,8 +6,7 @@ describe Bike do
 
 	it 'is not broken when created' do
 		:bike
-		expect(bike).not_to be_broken #same as below
-		#expect(bike.broken?).to be false
+		expect(bike).not_to be_broken
 	end
 
 	it 'can break' do
@@ -24,8 +23,4 @@ describe Bike do
 	end
 
 end
-
-# it can break
-# it can be fixed 
-
 
