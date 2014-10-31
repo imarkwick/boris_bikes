@@ -1,4 +1,4 @@
-require 'bike_container'
+require_relative 'bike_container'
 
 class DockingStation
 
@@ -12,10 +12,5 @@ class DockingStation
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY) #common pattern for passing optional arguments into Ruby
 		@bikes = []
 	end
-
-	def available_bikes
-		@bikes.reject {|bike| bike.broken?}
-	end
-
 
 end

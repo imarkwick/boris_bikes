@@ -2,13 +2,6 @@ module BikeContainer
 	
 	DEFAULT_CAPACITY = 10
 
-	# attr_accessor :bikes
-
-	# def initialize(options = {}) #allows you to get a default capacity so if nothing is passed in
-	# 	@capacity = options.fetch(:capacity, DEFAULT_CAPACITY) #common pattern for passing optional arguments into Ruby
-	# 	@bikes = []
-	# end
-
 	def bikes
 		@bikes ||= []
 	end
@@ -31,11 +24,25 @@ module BikeContainer
 	end
 
 	def full?
-		bike_count == @capacity
+		bike_count == capacity
 	end
 
 	def release(bike)
 		bikes.delete(bike)
+	end
+
+	def release_to(holder, bike)
+	# bikes << holder.release(bike)
+	holder.dock(bike)
+	self.release(bike)
+	end
+
+	def available_bikes
+	@bikes.reject {|bike| bike.broken?}
+	end
+
+	def unavailable_bikes
+	@bikes.select {|bike| bike.broken?}
 	end
 
 end
