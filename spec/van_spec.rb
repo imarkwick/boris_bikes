@@ -29,7 +29,12 @@ describe Van do
 		bike.break!
 		van.dock(bike)
 		expect(bike).to be_broken
+		expect{van.dock(bike)}.to change{van.bike_count}.by 1
 	end
+
+	# it "should not receive available bikes from station" do
+		
+	# end
 
 	# it "receives broken/unavailable bikes from the docking station" do
 	# 	van.dock

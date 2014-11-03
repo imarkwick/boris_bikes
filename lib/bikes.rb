@@ -5,16 +5,16 @@ class Bike
 	end 
 
 	def broken?
-		@broken #instance
+		@broken
 	end
 
-	def break! # is the ! doing anything?
+	def break!
 		@broken = true
 	end
 
 	def fix!
 		@broken = false
-		self # check what I am
+		self 
 	end
 
 end

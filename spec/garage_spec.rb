@@ -1,30 +1,23 @@
 require 'bike_container'
 require 'garage'
+require 'bikes'
 
 describe Garage do
 	
-let(:garage) {Garage.new}
-let(:van) {double :van, dock: bike, release_to: bike }
-let(:broken_bike) {double :bike, broken?: true}
-let(:bike) {double :bike}
-let(:bike) {Bike.new}
+	let(:garage) {Garage.new}
+	let(:van) {double :van, dock: bike, release_to: bike, bike_count: (1) }
+	# let(:broken_bike) {double :bike, broken?: true}
+	# let(:bike) {double :bike}
+	let(:bike) {Bike.new}
 
-it "has a capacity" do
-	expect(garage.capacity).to eq(40)
-end
+	it "has a capacity" do
+		expect(garage.capacity).to eq(40)
+	end
 
-it "receives broken bikes" do
+	# bike count initially 0
+	# when receives bike, garage.bike_count increases by 1
 
-	# bike.break!
-	# van.dock(bike)
-	# van.release_to(garage, bike)
-	# expect(garage.bike_count).to eq(1)
-	#van.release_to(garage, bike)
-	#expect(garage.bike_count)#.to eq(1)
-	#garage.receive_broken_bikes(van)
-end
 
-# garage must receive broken bike
 
 # garage must fix bike
 

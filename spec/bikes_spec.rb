@@ -2,7 +2,7 @@ require 'bikes'
 
 describe Bike do
 
-	let(:bike) {Bike.new} # :broken_bike is name of variable
+	let(:bike) {Bike.new}
 
 	it 'is not broken when created' do
 		:bike
