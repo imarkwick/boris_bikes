@@ -6,6 +6,7 @@ describe BikeContainer do
 
 	let(:bike) { Bike.new }
 	let(:holder) { ContainerHolder.new }
+	let(:station) { doube :station }
 
 	it 'should accept a bike' do
 		expect(holder.bike_count).to eq(0)
@@ -38,15 +39,11 @@ describe BikeContainer do
 	 	expect{holder.release(bike)}.to raise_error(RuntimeError)
 	 end
 
-	# it 'should only release an available bike' do
-	# 	working_bike, broken_bike = Bike.new, Bike.new
-	# 	broken_bike.break!
-	# 	holder.dock(working_bike)
-	# 	holder.dock(broken_bike)
-	# 	holder.release(working_bike)
-	# 	holder.release(broken_bike)
-	# 	expect(holder.bike_count).to eq(1)
-	# end
+	it 'should only release an available/working bike' do
+		bike.break!
+		holder.dock(bike)
+		expect{holder.available_bikes}.to change{holder.bike_count}.by (0)
+	 end
 
 end
 
