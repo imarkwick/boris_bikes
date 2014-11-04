@@ -37,14 +37,21 @@ module BikeContainer
 	end
 
 	def release_to(holder, bike)
-	# bikes << holder.release(bike)
-	holder.dock(bike)
-	self.release(bike)
+		# bikes << holder.release(bike)
+		holder.dock(bike)
+		self.release(bike)
 	end
 
 	def available_bikes
-	@bikes.reject {|bike| bike.broken?}
+		@bikes.reject {|bike| bike.broken?}
 	end
 
+	def broken_bikes
+		@bikes.select {|bike| bike.broken?}
+	end
+
+	def release_broken
+		@bikes.delete(broken_bikes.pop)
+	end
 
 end
