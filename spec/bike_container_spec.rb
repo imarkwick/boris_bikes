@@ -56,7 +56,5 @@ describe BikeContainer do
 		holder.dock(bike)
 		expect{holder.available_bikes}.to change{holder.bike_count}.by (0)
 	end
-
-	# should only release an available/working bike
 end
 

@@ -36,12 +36,6 @@ module BikeContainer
 		bikes.delete(bike)
 	end
 
-	def release_to(holder, bike)
-		# bikes << holder.release(bike)
-		holder.dock(bike)
-		self.release(bike)
-	end
-
 	def available_bikes
 		@bikes.reject {|bike| bike.broken?}
 	end
@@ -52,6 +46,12 @@ module BikeContainer
 
 	def release_broken
 		@bikes.delete(broken_bikes.pop)
+	end
+
+	def release_to(holder, bike)
+		# bikes << holder.release(bike)
+		holder.dock(bike)
+		self.release(bike)
 	end
 
 end
