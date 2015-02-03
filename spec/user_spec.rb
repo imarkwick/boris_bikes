@@ -6,9 +6,9 @@ include BikeHolder
 describe 'User' do 
 
 	let(:user) 						{ User.new }
-	let(:bike) 						{ double :bike }
+	let(:bike) 						{ double :bike, broken?: false }
 	let(:bike2)						{ double :bike }
-	let(:dodgy_bike)			{ double :bike, break!: bike, broken?: true }
+	let(:dodgy_bike)			{ double :bike, broken?: true }
 	let(:docking_station) { double :docking_station }
 
 	it 'should not have a bike to begin with' do
@@ -29,12 +29,11 @@ describe 'User' do
 	it 'should only be able to take one bike at a time' do
 		user.dock(bike)
 		expect(user.bike_count).to eq 1
-		expect{user.dock(bike2)}.to raise_error(RuntimeError)
+		expect{ user.dock(bike2) }.to raise_error(RuntimeError)
 	end
 
 	it 'should be able to break a bike' do
 		user.dock(dodgy_bike)
-		dodgy_bike.break!
 		expect(dodgy_bike.broken?).to be true
 	end
 

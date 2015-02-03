@@ -31,15 +31,15 @@ it should:
 - have no bikes to begin with						x
 - accept bikes 													x
 - release bikes 												x
-- know when it is full
+- know when it is full									x
 - not accept a bike when it is full			x
-- know when it is empty
-- not release a bike when it is empty
-- not release a broken bike to a user
+- know when it is empty									x
+- not release a bike when it is empty		x
+- not release a broken bike to a user 	x
 
 it interacts with:
-- Bike
-- Van
+- Bikes 																x
+- Van 																	x
 
 ###Van Class
 

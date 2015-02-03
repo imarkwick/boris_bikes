@@ -1,19 +1,13 @@
 require_relative 'bike_holder'
 
-class User
+class Van
 
 	include BikeHolder
 
-	DEFAULT_CAPACITY = 1
+	DEFAULT_CAPACITY = 10
 
 	def initialize(options = {})
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-		@bikes = []
-	end
-
-	def dock(bike)
-		raise 'Please return your bike before renting another' if full?
-		super
 	end
 
 end

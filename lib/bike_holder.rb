@@ -23,6 +23,7 @@ module BikeHolder
 	end
 
 	def release_to(holder, bike)
+		raise 'This bike is broken' if bike.broken? && holder.is_a?(User)
 		holder.dock(bike)
 		self.release(bike)
 	end
@@ -31,4 +32,7 @@ module BikeHolder
 		bike_count == @capacity
 	end
 
+	# def broken_bike_count
+	# 	bikes.select { |bike| bike if bike.broken? }.count
+	# end
 end

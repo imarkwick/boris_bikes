@@ -5,9 +5,10 @@ class Holder; include BikeHolder end
 describe 'BikeHolder' do 
 
 	let(:bike_holder) 		{ Holder.new }
-	let(:docking_station) { DockingStation.new }
-	let(:bike)						{ Bike.new }
-	let(:user)						{ User.new }
+	let(:user)						{ double :user }
+	let(:docking_station) { double :DockingStation }
+	let(:bike)						{ double :Bike, broken?: false }
+	let(:broken_bike)			{ double :Bike, broken?: true }
 
 	it 'should begin without any bikes' do
 		expect(bike_holder.bike_count).to eq 0
@@ -33,14 +34,11 @@ describe 'BikeHolder' do
 	end
 
 	it 'should know when it is full' do
-		expect(docking_station).not_to be_full
-		20.times { docking_station.dock(bike) }
-		expect(docking_station.full?).to be true
+		expect(bike_holder).not_to be_full
+		10.times{ bike_holder.dock(bike) }
+		expect(bike_holder.full?).to be true
 	end
 
-	it 'should know when a user has a bike' do
-		user.dock(bike)
-		expect(user.full?).to be true
-	end
-		
 end
+
+
