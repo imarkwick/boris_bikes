@@ -7,11 +7,11 @@ boris bikes ruby practice
 ###Bike Class
 
 it should:
-- work on initialization
-- can break
+- work on initialization		x
+- can break									x
 
 it interacts with:
-- Docking Station
+- Docking Station 					x
 
 ###User Class
 
@@ -28,8 +28,9 @@ it interacts with:
 ###Docking Station Class
 
 it should:
-- accept bike
-- release bike
+- have no bikes to begin with						x
+- accept bikes 													x
+- release bikes 												x
 - know when it is full
 - not accept a bike when it is full
 - know when it is empty
