@@ -16,8 +16,8 @@ it interacts with:
 ###User Class
 
 it should:
-- have no bikes when initialized
-- be able to take a bike from the docking station
+- have no bikes when initialized											x
+- be able to take a bike from the docking station 		x
 - be able to dock a bike at the docking station
 - be able to break a bike
 
