@@ -16,4 +16,9 @@ module BikeHolder
 		bikes.delete(@bike)
 	end
 
+	def release_to(holder, bike)
+		holder.dock(bike)
+		self.release(bike)
+	end
+
 end
