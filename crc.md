@@ -22,8 +22,8 @@ it should:
 - be able to break a bike 														x
 
 it interacts with:
-- Docking Station 																		
-- Bike
+- Docking Station 																		x
+- Bikes 																							x
 
 ###Docking Station Class
 
@@ -32,7 +32,7 @@ it should:
 - accept bikes 													x
 - release bikes 												x
 - know when it is full
-- not accept a bike when it is full
+- not accept a bike when it is full			x
 - know when it is empty
 - not release a bike when it is empty
 - not release a broken bike to a user
