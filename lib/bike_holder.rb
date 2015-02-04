@@ -15,11 +15,11 @@ module BikeHolder
 	end
 
 	def dock(bike)
-		bikes << @bike
+		bikes << bike
 	end
 
 	def release(bike)
-		bikes.delete(@bike)
+		bikes.delete(bike)
 	end
 
 	def release_to(holder, bike)

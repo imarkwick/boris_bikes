@@ -35,10 +35,4 @@ describe 'Docking Station' do
 		docking_station.release_to(van, broken_bike)
 		expect(van.bike_count).to eq 1
 	end
-
-	it 'should know how many broken bikes are at the docking station' do
-		docking_station.dock(bike)
-		docking_station.dock(broken_bike)
-		expect(docking_station.broken_bike_count).to eq 1
-	end
 end
