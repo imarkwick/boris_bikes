@@ -46,6 +46,12 @@ describe 'BikeHolder' do
 		expect(docking_station.broken_bike_count).to eq 1
 	end
 
+	it 'should know how many working bikes are at the docking station' do
+		bike_holder.dock(bike)
+		bike_holder.dock(broken_bike)
+		expect(bike_holder.working_bike_count).to eq 1		
+	end
+
 end
 
 

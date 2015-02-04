@@ -36,8 +36,8 @@ it should:
 - know when it is empty										x
 - not release a bike when it is empty			x
 - not release a broken bike to a user 		x
-- know how many broken bikes there are
-- release broken bikes to the van
+- know how many broken bikes there are 		x
+- release broken bikes to the van 				x
 - know no.of available bikes
 
 it interacts with:

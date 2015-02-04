@@ -35,4 +35,8 @@ module BikeHolder
 	def broken_bike_count
 		bikes.select { |bike| bike.broken? }.count
 	end
+
+	def working_bike_count
+		bikes.select { |bike| !bike.broken? }.count
+	end
 end
