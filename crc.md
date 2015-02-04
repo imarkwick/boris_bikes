@@ -28,23 +28,26 @@ it interacts with:
 ###Docking Station Class
 
 it should:
-- have no bikes to begin with						x
-- accept bikes 													x
-- release bikes 												x
-- know when it is full									x
-- not accept a bike when it is full			x
-- know when it is empty									x
-- not release a bike when it is empty		x
-- not release a broken bike to a user 	x
+- have no bikes to begin with							x
+- accept bikes 														x
+- release bikes 													x
+- know when it is full										x
+- not accept a bike when it is full				x
+- know when it is empty										x
+- not release a bike when it is empty			x
+- not release a broken bike to a user 		x
+- know how many broken bikes there are
+- release broken bikes to the van
+- know no.of available bikes
 
 it interacts with:
-- Bikes 																x
-- Van 																	x
+- Bikes 																	x
+- Van 																		x
 
 ###Van Class
 
 it should:
-- accept a bike from the station
+- accept a bike from the station 					x
 - release a bike to the garage
 - accept a bike from the garage
 - release a bike to the station

@@ -2,12 +2,12 @@ module BikeHolder
 
 	DEFAULT_CAPACITY = 10
 
-	def initialize(options = {})
-		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-	end
-
 	def bikes
 		@bikes ||= []
+	end
+
+	def capacity
+		@capacity ||= DEFAULT_CAPACITY
 	end
 
 	def bike_count
@@ -29,10 +29,10 @@ module BikeHolder
 	end
 
 	def full?
-		bike_count == @capacity
+		bike_count == capacity
 	end
 
-	# def broken_bike_count
-	# 	bikes.select { |bike| bike if bike.broken? }.count
-	# end
+	def broken_bike_count
+		bikes.select { |bike| bike.broken? }.count
+	end
 end
