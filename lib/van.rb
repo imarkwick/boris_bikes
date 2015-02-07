@@ -8,6 +8,7 @@ class Van
 
 	def initialize(options = {})
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
+		@bikes = []
 	end
 
 end
