@@ -11,7 +11,7 @@ it should:
 - can break									x
 
 it interacts with:
-- Docking Station 					x
+- Docking Station 					
 
 ###User Class
 
@@ -22,8 +22,8 @@ it should:
 - be able to break a bike 														x
 
 it interacts with:
-- Docking Station 																		x
-- Bikes 																							x
+- Docking Station 																		
+- Bikes 																							
 
 ###Docking Station Class
 
@@ -41,8 +41,8 @@ it should:
 - know no.of available bikes 							x
 
 it interacts with:
-- Bikes 																	x
-- Van 																		x
+- Bikes 																	
+- Van 																		
 
 ###Van Class
 
@@ -64,11 +64,9 @@ it interacts with:
 it should:
 - accept a broken bike from the van 		x
 - fix the bike 													x
-- release a fixed bike to the van 			
-- know when it is full
-- not accept a bike when it is full
-- know when it is empty
-- not release a bike when it is empty
+- release a fixed bike to the van 			x
+- know when it is full									x
+- not accept a bike when it is full 		x
 
 it interacts with:
 - Bike

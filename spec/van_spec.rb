@@ -52,10 +52,3 @@ describe 'Van' do
 end
 
 
-
-
-
-
-
-
-

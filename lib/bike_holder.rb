@@ -14,7 +14,7 @@ module BikeHolder
 		bikes.count
 	end
 
-	def dock(bike)
+	def dock(bike)	
 		bikes << bike
 	end
 
