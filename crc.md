@@ -49,8 +49,8 @@ it interacts with:
 it should:
 - accept a bike from the station 					x
 - release a bike to the garage  					x
-- accept a bike from the garage
-- release a bike to the station
+- accept a bike from the garage 					x
+- release a bike to the station 					x
 - know when it is full 										x
 
 it interacts with:
